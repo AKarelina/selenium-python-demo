@@ -7,7 +7,7 @@ ORG_HEADER_TITLE = (By.CSS_SELECTOR, ".bolt-master-panel-header-title")
 
 # create project
 # delete project
-
+@pytest.mark.smoke
 @pytest.mark.usefixtures("org_page")
 class TestOrg:
     def test_org_settings_link(self, org_page):
