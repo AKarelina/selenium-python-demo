@@ -21,3 +21,7 @@ class Base:
 
     def get_cookie(self, name):
         return self.wait.until(lambda d: d.get_cookie(name))
+
+    def verify_text(self, locator, text):
+        assert self.driver.find_element(locator).text == text, f"Actual text {self.driver.find_element(locator).text}" \
+                                                               f" Expected text {text} "
